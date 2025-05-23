@@ -1,0 +1,53 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+############
+# UI-React
+############
+
+# dependencies
+UI-React/node_modules/
+
+# Expo
+UI-React/.expo/
+UI-React/dist/
+UI-React/web-build/
+UI-React/expo-env.d.ts
+
+# Native
+UI-React/*.orig.*
+UI-React/*.jks
+UI-React/*.p8
+UI-React/*.p12
+UI-React/*.key
+UI-React/*.mobileprovision
+
+# Metro
+UI-React/.metro-health-check*
+
+# debug
+UI-React/npm-debug.*
+UI-React/yarn-debug.*
+UI-React/yarn-error.*
+
+# macOS
+UI-React/.DS_Store
+UI-React/*.pem
+
+# local env files
+UI-React/.env*.local
+
+# typescript
+UI-React/*.tsbuildinfo
+
+############
+# Esp-32
+############
+
+# PlatformIO build output (ESP32)
+Esp-32/.pio
+
+# VSCode settings for ESP32
+Esp-32/.vscode/.browse.c_cpp.db*
+Esp-32/.vscode/c_cpp_properties.json
+Esp-32/.vscode/launch.json
+Esp-32/.vscode/ipch
