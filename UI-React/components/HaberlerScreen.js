@@ -1,10 +1,10 @@
-// components/HaberlerScreen.js
+
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView, SafeAreaView, TouchableOpacity } from "react-native";
 import Header from "./Header";
 
 export default function HaberlerScreen({ onClose }) {
-  const [expandedIndex, setExpandedIndex] = useState(null); // Genişletilen haberin index'ini tutar
+  const [expandedIndex, setExpandedIndex] = useState(null); 
 
   const haberler = [
     {
@@ -26,11 +26,11 @@ export default function HaberlerScreen({ onClose }) {
   ];
 
   const toggleExpand = (index) => {
-    // Eğer tıklanan haber zaten genişletilmişse, kapat
+    
     if (expandedIndex === index) {
       setExpandedIndex(null);
     } else {
-      // Değilse, tıklanan haberi genişlet
+      
       setExpandedIndex(index);
     }
   };
@@ -45,7 +45,7 @@ export default function HaberlerScreen({ onClose }) {
             <TouchableOpacity
               key={index}
               style={styles.haberCard}
-              onPress={() => toggleExpand(index)} // Haber kartına tıklandığında genişlet
+              onPress={() => toggleExpand(index)} 
             >
               <Text style={styles.haberBaslik}>{haber.baslik}</Text>
               {/* Eğer haber genişletilmişse, içeriği göster */}

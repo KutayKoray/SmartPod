@@ -5,7 +5,6 @@ import Header from "./Header";
 
 export default function BilgilerScreen({ navigation }) {
 
-  // api'ye istek atılıp belirli bir ortalama değerler ile işlem yapılmalı. son değerler ile değil.
   const userPlant = {
     name: "Orkide",
     temperature: "18-22°C",
@@ -17,9 +16,8 @@ export default function BilgilerScreen({ navigation }) {
   const [cameraModalVisible, setCameraModalVisible] = useState(false);
   const [imageUri, setImageUri] = useState(null);
   const [flowerType, setFlowerType] = useState(null);
-  const [isLoading, setIsLoading] = useState(false); // Yeni durum değişkeni
+  const [isLoading, setIsLoading] = useState(false); 
 
-  // Kamera izinlerini kontrol et
   useEffect(() => {
     (async () => {
       if (Platform.OS !== "web") {
@@ -46,7 +44,7 @@ export default function BilgilerScreen({ navigation }) {
       if (!result.canceled) {
         console.log("Seçilen resim:", result.assets[0].uri);
         setImageUri(result.assets[0].uri);
-        setIsLoading(true); // Yükleniyor animasyonunu başlat
+        setIsLoading(true);
         await sendImageToServer(result.assets[0].uri);
       }
     } catch (error) {
@@ -90,11 +88,11 @@ export default function BilgilerScreen({ navigation }) {
       console.log("Sunucu cevabı:", result);
 
       setFlowerType(result.flowerType || result.predictions[0].class);
-      setIsLoading(false); // Yüklenme tamamlandı
+      setIsLoading(false); 
     } catch (error) {
       console.error("Sunucu hatası:", error);
       alert("Sunucu hatası: " + error.message);
-      setIsLoading(false); // Hata durumunda yüklenmeyi durdur
+      setIsLoading(false); 
     }
   };
 

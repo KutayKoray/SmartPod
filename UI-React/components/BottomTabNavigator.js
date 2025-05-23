@@ -4,8 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import { styles, colors } from "./styles/BottomTabNavigatorStyles";
 import SaksimScreen from "./SaksimScreen";
-import BilgilerScreen from "./BilgilerScreen"; // Bilgiler ekranı ayrı dosya olarak içe aktarıldı
-import AyarlarScreen from "./AyarlarScreen"; // Ayarlar ekranı da ayrı bir dosyada olabilir
+import BilgilerScreen from "./BilgilerScreen"; 
+import AyarlarScreen from "./AyarlarScreen";
 
 const Tab = createBottomTabNavigator();
 

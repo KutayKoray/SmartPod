@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  fastapi_server:
+    build: .
+    ports:
+      - "9999:9999"
+    restart: always  # Sistem restart olsa bile otomatik çalışır
+

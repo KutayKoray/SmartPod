@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView, ActivityIndicator } from "react-native";
 import Header from "./Header";
 
-const API_URL = "http://213.14.135.179:11111/data/latest/SN12345"; // Server IP'yi değiştir
+const API_URL = "http://213.14.135.179:11111/data/latest/SN12345"; 
 
 const SensorBox = ({ label, value, unit, icon }) => (
   <View style={styles.sensorBox}>
@@ -23,20 +23,20 @@ export default function SaksimScreen() {
   useEffect(() => {
     fetchSensorData();
 
-    // 📌 Her 5 saniyede bir güncellemek için interval ayarı
+    
     const interval = setInterval(fetchSensorData, 5000);
 
-    return () => clearInterval(interval); // Bellek sızıntısını önlemek için temizleme
+    return () => clearInterval(interval); 
   }, []);
 
   const fetchSensorData = async () => {
     try {
-      const response = await fetch(`${API_URL}?t=${new Date().getTime()}`); // Önbelleği önlemek için timestamp ekledik
+      const response = await fetch(`${API_URL}?t=${new Date().getTime()}`); 
       if (!response.ok) throw new Error("Veri alınamadı");
 
       const data = await response.json();
 
-      // 📌 Yeni veri eski veriden farklıysa state güncelle
+      
       if (JSON.stringify(data) !== JSON.stringify(sensorData)) {
         setSensorData(data);
       }

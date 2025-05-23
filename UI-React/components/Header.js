@@ -1,8 +1,8 @@
-// components/Header.js
+
 import React from "react";
 import { View, Text, Image, StyleSheet, SafeAreaView, TouchableOpacity } from "react-native";
 import { colors } from "./styles/BottomTabNavigatorStyles";
-import { Ionicons } from "@expo/vector-icons"; // Geri düğmesi için ikon kütüphanesi
+import { Ionicons } from "@expo/vector-icons"; 
 
 export default function Header({ title, onBackPress }) {
   return (
@@ -26,20 +26,20 @@ export default function Header({ title, onBackPress }) {
 const styles = StyleSheet.create({
   safeArea: {
     backgroundColor: colors.background,
-    paddingTop: 30, // Üst kısmı genişletildi
+    paddingTop: 30, 
   },
   headerContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    height: 80, // Header yüksekliği artırıldı
+    height: 80, 
     paddingVertical: 15,
     shadowColor: "#000",
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
-    position: "relative", // Geri düğmesini konumlandırmak için
+    position: "relative", 
   },
   logo: {
     width: 40,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     color: colors.primary,
   },
   backButton: {
-    position: "absolute", // Geri düğmesini sola konumlandır
+    position: "absolute", 
     left: 15,
     padding: 10,
   },

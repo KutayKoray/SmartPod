@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
     borderTopWidth: 1,
     borderTopColor: colors.secondary,
-    paddingBottom: 10,  // Simge ve metni biraz yukarı almak için
-    paddingTop: 10,  // Üstten de boşluk verdik
+    paddingBottom: 10,
+    paddingTop: 10, 
     position: "absolute",
     left: 20,
     right: 20,
@@ -24,9 +24,9 @@ export const styles = StyleSheet.create({
     elevation: 5,
   },
   tabLabel: {
-    fontSize: 14, // Yazıyı biraz büyüttük
+    fontSize: 14,
     fontWeight: "bold",
-    marginBottom: 8, // Yazıyı yukarı kaydırdık
+    marginBottom: 8,
     color: colors.text,
   },
 });
